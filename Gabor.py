@@ -7,6 +7,7 @@ from dash.dependencies import Input, Output
 import base64
 
 app = dash.Dash()
+server=app.server
 
 app.layout = html.Div([
     html.H1("Gabor特征展示"),
@@ -81,4 +82,4 @@ def update_output(contents):
         return None, None
 
 if __name__ == '__main__':
-    app.run_server(debug=True,port=804)
+    app.run_server(debug=False)
